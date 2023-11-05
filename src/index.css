@@ -291,8 +291,19 @@ nav {
   transition: var(--transition);
 }
 
-.links a:hover{
+.links a:hover {
   background: var(--primary-100);
   color: var(--primary-500);
   padding-left: 1.5rem;
+}
+
+/* 1rem = 16px */
+.links-container {
+  height: 0rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-container{
+  height: 10rem;
 }
