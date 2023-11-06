@@ -24,7 +24,6 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-
         <div
           ref={refListContainer}
           style={linkStyles}
@@ -40,8 +39,15 @@ const Navbar = () => {
             })}
           </ul>
         </div>
-
-        <div className="social-icons"></div>
+        <ul className="social-icons">
+          {social.map(({ id, url, icon }) => {
+            return (
+              <li key={id}>
+                <a href={url}>{icon}</a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </nav>
   );
